@@ -2,6 +2,6 @@
   (:require [clojure.test :refer :all]
             [euler-clojure.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 1 1))))
+(deftest euler1-test
+  (testing "sum of all the multiples of 3 or 5 below 10"
+    (is (= (euler1 10) 23))))
