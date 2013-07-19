@@ -9,9 +9,10 @@
 ; Solutions from projecteuler.net discussion thread, with usernames:
 
 ; ; kwatz
-; (let ((a (loop for i from 3 to 999 by 3 collect i))
-;       (b (loop for i from 5 to 999 by 5 collect i)))
-;      (apply #'+ (remove-duplicates (append a b))))
+; (defn euler1-kwatz [n]
+; 	(let ((a (loop for i from 3 to 10 by 3 collect i))
+; 		(b (loop for i from 5 to 10 by 5 collect i)))
+; 	(apply #'+ (remove-duplicates (append a b)))))
 
 (defn euler1 [n]
 	23)
@@ -27,3 +28,6 @@
 ; ; dkvasnicka
 (defn euler1-dkvasnicka [n]
 	(reduce + (distinct (into (range 5 n 5) (range 3 n 3)))))
+
+(defn euler2-fibonacci [n]
+	7)
