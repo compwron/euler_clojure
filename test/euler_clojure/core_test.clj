@@ -5,3 +5,12 @@
 (deftest euler1-test
   (testing "sum of all the multiples of 3 or 5 below 10"
     (is (= (euler1 10) 23))))
+(deftest euler1-johnbendi-test
+  (testing "sum of all the multiples of 3 or 5 below 10"
+    (is (= (euler1-johnbendi 10) 23))))
+(deftest euler1-dkvasnicka-test
+  (testing "sum of all the multiples of 3 or 5 below 10"
+    (is (= (euler1-dkvasnicka 10) 23))))
+
+; TODO: fizzbuzz
+; TODO: fibonacci 
