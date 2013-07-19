@@ -8,13 +8,15 @@
 
 (def euler1 (fn [x currentSum] 
 	(do
-		(println "current x: " x)
+		(println "current x: " x "current sum: " currentSum)
 		(if (= 0 (/ x 3))
+			(println "divisible by 3")
 			(if (= 0 / x 5)
+				(println "divisible by 5")
 				(euler1 (- x 1) (+ x currentSum)) ))
 		(if (> x 1)
-			(euler1 (- x 1) currentSum))
-		(println "current sum: " currentSum))))
+			(euler1 (- x 1) currentSum)
+			(identity currentSum)))))
 
 
 
