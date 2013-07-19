@@ -36,12 +36,12 @@
 
 ; ; johnbendi 
 ; (ns euler.problem1)
-; (defn mult-of-3-or-5? [n]
-;   (or (= 0 (mod n 3))
-;       (= 0 (mod n 5))))
-; (defn sum-mult-of-3-or-5 [range-n]
-;   (reduce + (filter #(mult-of-3-or-5? %)
-;                     (range range-n))))
+(defn mult-of-3-or-5? [n]
+  (or (= 0 (mod n 3))
+      (= 0 (mod n 5))))
+(defn euler1 [range-n]
+  (reduce + (filter #(mult-of-3-or-5? %)
+                    (range range-n))))
 
 ; ; dkvasnicka
 ; (reduce + (distinct (into (range 5 1000 5) (range 3 1000 3))))

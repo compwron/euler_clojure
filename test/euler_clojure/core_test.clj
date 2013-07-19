@@ -4,4 +4,4 @@
 
 (deftest euler1-test
   (testing "sum of all the multiples of 3 or 5 below 10"
-    (is (= (euler1 3 0) 23))))
+    (is (= (euler1 10) 23))))
