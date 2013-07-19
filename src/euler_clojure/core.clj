@@ -29,5 +29,8 @@
 (defn euler1-dkvasnicka [n]
 	(reduce + (distinct (into (range 5 n 5) (range 3 n 3)))))
 
-(defn euler2-fibonacci [n]
+(defn fibonacci-marker [a, b]
 	7)
+(defn euler2-fibonacci [threshold current]
+	(if (> threshold current)
+	(fibonacci-marker 1 1)))
