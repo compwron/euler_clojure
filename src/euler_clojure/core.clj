@@ -6,35 +6,18 @@
   ;; work around dangerous default behaviour in Clojure
   (alter-var-root #'*read-eval* (constantly false)))
 
-(declare euler1-recur)
-(def euler1 (fn [x] 
+(def euler1 (fn [x currentSum] 
 	(do
 		(println "current x: " x)
-		(if (> 0 x)
-			x
-			(euler1-recur (- x 1))))))
+		(if (= 0 (/ x 3))
+			(if (= 0 / x 5)
+				(euler1 (- x 1) (+ x currentSum)) ))
+		(if (> x 1)
+			(euler1 (- x 1) currentSum))
+		(println "current sum: " currentSum))))
 
-(def euler1-recur (fn [x] 
-	(do
-		(println "current x in recur: " x)
-		(if (> 0 x)
-			x
-			(euler1 (- x 1))))))
 
-; (declare div2-recur)
-; (defn sqrt-recur [n]
-;   (do
-;     (println "sqrt-recur:" n)
-;     (if (< n 1)
-;       n
-;       (div2-recur (Math/sqrt n)))))
- 
-; (defn div2-recur [n]
-;   (do
-;     (println "div2-recur:" n)
-;     (if (< n 1)
-;       n
-;       (sqrt-recur (/ n 2)))))
+
 
 
 ; python
