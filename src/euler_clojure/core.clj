@@ -32,6 +32,6 @@
 
 (defn euler2-fibonacci [a b current]
   (println "a: " a " b: " b " current: " current)
-	(if (> current 0)
+	(if (= current 0)
       (euler2-fibonacci b (+ a b) (- current 1))
     (identity b)))
