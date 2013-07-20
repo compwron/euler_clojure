@@ -14,8 +14,8 @@
 
 (deftest euler2-fibonacci-test
   (testing "sum of fibonacci sequence up to x numbers"
-  	; 1 1 2 3 5 8
-    (is (= (euler2-fibonacci 4 0) 7))))
+  	; 1 1 2 3  ;5 8
+    (is (= (euler2-fibonacci 1 1 4) 7))))
 
 ; TODO: fizzbuzz
 ; TODO: fibonacci 
