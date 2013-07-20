@@ -30,8 +30,8 @@
 	(reduce + (distinct (into (range 5 n 5) (range 3 n 3)))))
 
 
-(defn euler2-fibonacci [a b current]
-  (println "a: " a " b: " b " current: " current)
-	(if (= current 0)
-      (euler2-fibonacci b (+ a b) (- current 1))
-    (identity b)))
+(defn euler2-fibonacci [a b current sum]
+  ; (println "a: " a " b: " b " current: " current " sum: " sum)
+	(if (> current 1)
+      (euler2-fibonacci b (+ a b) (- current 1) (+ sum b))
+    (identity sum)))
